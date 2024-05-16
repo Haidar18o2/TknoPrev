@@ -1,0 +1,43 @@
+Alogithma Proses order makanan/minuman via online:
+1.Mencari nama restaurant berdasarkan keinginan user pada kolom pencarian 
+2.Menampilkan list restaurant berdasarkan hasil input user 
+3.User memilih restaurant yang di inginkan 
+4.Menampilkan menu berdasarkan restaurant yang di pilih 
+5.User memilih makanan/minuman yang diinginkan
+6.User Memasukkan alamat rumah secara detail 
+7.Menampilkan tagihan yang harus dibayarkan
+8.User memilih metode pembayaran 
+9.User melakukan pembayaran
+10.Sistem memvalidasi proses pembayaran
+11.Jika proses pembayaran gagal,kembali ke langkah 8
+12.Jika berhasil,proses dilakukan dan melakukan pengiriman.
+
+
+
+pseudocode
+PROGRAM Online Food Order
+ 
+START
+READ INPUT RestaurantName
+FOR Restaurant IN ListOfRestaurant
+	IF Restaurant INCLUDE RestaurantName
+		SHOW Restaurant
+ 
+READ INPUT ChoosenRestaurant
+SHOW MenuList WHERE Restaurant = ChoosenRestaurant
+ 
+WHILE UserNotFinish
+	READ INPUT SelectedMenu
+	ADD SelectedMenu To Cart
+ 
+READ INPUT UserAddress
+SHOW BillAmount
+BillPaid = FALSE
+ 
+WHILE BillPaid NOT TRUE
+	READ INPUT PaymentMethod
+	READ INPUT Payment
+	IF Payment IS VALID
+		BillPaid = TRUE
+		ProcessingDelivery
+END
